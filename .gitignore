@@ -1,0 +1,7 @@
+# 환경 변수 파일
+.env
+
+# Node modules
+node_modules/
+
+.eslintrc.js

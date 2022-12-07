@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papago</title>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gugi&family=Nanum+Gothic:wght@700&family=Nanum+Myeongjo:wght@700&display=swap"
+        rel="stylesheet">
+    <style type="text/css">
+        a:link {
+            color: darkslategrey;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:visited {
+            color: darkslategrey;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: darkblue;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav id="header_left" style="display:flex; align-items: center; ">
+            <img src="logo.png" style="width: 160px;  margin: 1rem; ">
+            <ul style="display:flex; align-items: center; list-style:none; padding: 1rem;">
+                <li style="margin-right: 1.5rem;"><a href="https://papago.naver.net/website?locale=ko"
+                        style="text-decoration: none; color: black;">웹사이트 번역</a></li>
+                <li style="margin-right: 1.5rem;"><a href="https://papago.naver.com/docs/"
+                        style="text-decoration: none; color: black;">문서번역</a></span>
+                <li style="margin-right: 1rem;"><a href="https://papago.naver.com/gym/home"
+                        style="text-decoration: none; color: black;">GYM</a> </li>
+                <li style="margin-right: 1rem; color: lightgray">|</li>
+                <li> <a href="https://dict.naver.com/" style="text-decoration: none; color: black;">사전</a></li>
+        </nav>
+        <nav id="header_right" style="display:flex; align-items: center;">
+            <button style="background-color:transparent ; border: none; margin: .5rem; cursor: pointer; "
+                title="작은창 번역"><img src="icon1.png" style="width: 27px; "></button>
+            <button style="background-color:transparent ; border: none; margin: .5rem; cursor: pointer; "
+                title="즐겨찾기"><img src="star.png" style="width: 27px; "></button>
+            <button style="background-color:transparent ; border: none; margin: .5rem; cursor: pointer;"><img
+                    src="equalizer.png" style="width: 27px; " title="설정"></button>
+            <button style="height: 30px; margin: .5rem;">로그인</button>
+            <button style="background-color:transparent ; border: none; margin: .5rem; cursor: pointer;"><img
+                    src="grid.png" style="width: 27px; "></button>
+        </nav>
+    </header>
+    <section>
+        <div class="main">
+            <h1>Papago Web 번역기</h1>
+            <div class="rwd_box">
+                <div class="left_box">
+                    <div class="top_box">
+                        <div class="select_lan">
+                            <select class="form-select" style="width:150px;height: 50px;border: 0;border-radius: 40px;"
+                                aria-label="Default select example">
+                                <option selected>자동 언어감지</option>
+                                <option value="ko">한국어</option>
+                                <option value="en">English</option>
+                                <option value="ja">日本語</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="middle_box">
+                        <p><textarea id="input_text" placeholder="번역할 내용을 입력하세요"></textarea></p>
+                        <p class="count">0 / 5000</p>
+                    </div>
+                    <div class="bottom_box">
+                        <button class="sound" type="button"><img src="volume.png" alt="" width="60"
+                                height="52"></button>
+                        <button class="copy" type="button"><img src="document.png" alt="" width="60"
+                                height="52"></button>
+                        <button class="translate" type="button">번역하기</button>
+                    </div>
+                </div>
+                <div class="right_box">
+                    <div class="top_box">
+                        <select class="form-select" style="width:150px;height: 50px;border: 0;border-radius: 40px;"
+                            aria-label="Default select example">
+                            <option selected>English</option>
+                            <option value="ko">한국어</option>
+                            <option value="ja">日本語</option>
+                        </select>
+                    </div>
+                    <div class="middle_box">
+                        <p><textarea id="output_text" placeholder="Read Only" readonly></textarea></p>
+                    </div>
+                    <div class="bottom_box">
+                        <button class="sound" type="button"><img src="volume.png" alt="" width="60"
+                                height="52"></button>
+                        <button class="copy" type="button"><img src="document.png" alt="" width="60"
+                                height="52"></button>
+                        <button class="mark" type="button"><img src="star.png" alt="" width="60" height="52"></button>
+                        <button class="share" type="button"><img src="share.png" alt="" width="60" height="52"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="box_under">
+                <div class="wrapper">
+                    <input type="checkbox" id="switch">
+                    <label for="switch" class="switch_label">
+                        <span class="onf_btn"></span>
+                    </label>
+                    <p class="wkehddhkstjd">자동완성</p>
+                </div>
+                <hr>
+                <div class="web_trans">
+                    <label for="input_URL">웹사이트 번역</label>
+                    <p><textarea id="input_URL" placeholder="URL을 입력하세요."></textarea></p>
+                    <select class="form-select" style="width:150px;height: 50px;border-radius: 40px;"
+                        aria-label="Default select example">
+                        <option selected>한국어로 번역</option>
+                        <option value="ko">영어로 번역</option>
+                        <option value="ja">일본어로 번역</option>
+                        <option value="ja">중국어로 번역</option>
+                    </select>
+                    <button class="button" type="submit">→</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav class="footer_link">
+            <hr />
+            <img class="picat" src="aaa.jpg" width="150" height="150" alt="My Image">
+            <a href="https://policy.naver.com/rules/service.html" target="_blank">이용약관</a>
+            <a href="https://naver.com" target="_blank">개인정보처리방침</a>
+            <span>고객센터</sapn>
+                <div>
+                    <span>의견제안</span>
+                    <a href="https://policy.naver.com/policy/disclaimer.html" target="_blank"> 책임의 한계와 법적고지</a>
+                </div>
+        </nav>
+        <p class="admin_address">
+            <span>저자 : 빅데이터반 15기</span><br />
+            <a href="https://www.google.com/intl/ko/gmail/about/" target="_blank">이메일 : PlayData@gmail.com</a><br />
+            <span>Copyright 2022. 15기. All Rights Reserved.</span>
+        </p>
+        <address class="Logo_address">
+            <a href="http://127.0.0.1:5500/web/9.mini/plus.html" target="_self" style="color: grey;">ⓒ BigData Corp.</a>
+        </address>
+    </footer>
+</body>
+
+</html>
